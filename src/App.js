@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { Component, Fragment }from 'react';
 import './App.css';
+// import axios from 'axios'
+// import {connect} from 'react-redux'
+// import {fetchMeals} from './actions/fetchMeals'
+import MealsContainer from './containers/MealsContainer'
+// import DrillsContainer from './containers/DrillsContainer'
+// import Navbar from './components/Navbar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  // state = {  }
+componentDidMount() {
+  // this.props.fetchMeals({ type: 'FETCH_MEALS', payload: {meal_name: 'name'}})
+//   fetch('http://localhost:3000/meals',
+// { method: 'GET'}
+// )
+// .then(response => response.json())
+// .then(jsonResponse =>
+//   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
 }
+  // this.props.meals
+  // this.props.fetchMeals
+
+  render() { 
+    return (
+      <Fragment>
+        <div className="App">
+        {/* <Navbar/> */}
+        <MealsContainer/>
+        {/* <br/> */}
+        {/* <DrillsContainer/> */}
+          {/* { jsonResponse } */}
+        </div>
+
+      </Fragment> 
+     );
+  }
+}
+
+// ! call dispach on the return value of the 2nd argument (null,fetchMeals) 
 
 export default App;
